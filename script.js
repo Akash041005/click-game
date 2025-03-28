@@ -3,7 +3,7 @@ elem.innerHTML='<h1>click me</h1>'
 let scoru = document.querySelector('#scoru')
 let jeet = document.querySelector('#jeet')
 let errr =  document.querySelector('#error')
-let score = 95;
+let score = 0;
 let change=0;
 
 let l=0
