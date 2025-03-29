@@ -58,3 +58,42 @@ html,body{
 #error{
     color: white;
 }
+.diffi{
+        
+        height: 100%;
+        width: 100%;
+        background-color: blue;
+       
+     
+       
+            h1{
+                align-self: center;
+                justify-self: center;
+            }
+   
+        
+            .buttons{
+                display: flex;
+                // flex-direction: column;
+                justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    #easy{
+                        background: green;
+
+                    }
+                    #mid{
+                        background-color: orange;
+
+                    }
+                    #hard{
+                        background-color: red;
+                    }
+            }
+        button{
+            height: 3rem;
+            width: 10rem;
+
+        }
+}

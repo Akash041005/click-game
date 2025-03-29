@@ -1,15 +1,43 @@
 let elem = document.querySelector('.elem')
 elem.innerHTML='<h1>click me</h1>'
+let f=0
 let scoru = document.querySelector('#scoru')
 let jeet = document.querySelector('#jeet')
 let errr =  document.querySelector('#error')
+let easy =  document.querySelector('#easy')
+let mid=  document.querySelector('#mid')
+let hard =  document.querySelector('#hard')
+let diffi =  document.querySelector('.diffi')
 let score = 0;
 let change=0;
 
+
+              easy.addEventListener('click',function(){
+              f=1
+
+              diffi.style.display = 'none';
+
+              });
+              mid.addEventListener('click',function(){
+                f=2;
+
+                diffi.style.display = 'none';
+                });
+                hard.addEventListener('click',function(){
+                  f=3
+                
+                diffi.style.display = 'none';
+
+                  });
+
+
 let l=0
 let m=0
-let f= Number(prompt(`enter difficultyy hard=3 mid=2 easy=1`))
 let d=0
+
+
+ 
+
 
 if(f==3){d=400}
 else if(f==2){d=600}
@@ -19,11 +47,15 @@ else if(f==0 || f==null || f==undefined){
 
   errr.innerHTML='enter difficulty properly '
 }
+if(conf=1){
+  diffi.style.display = 'none';
+}
+
 
 
 setInterval(function(){
   l=Math.floor(Math.random()*80)
-  m= Math.floor(Math.random()*50)
+  m= Math.floor(Math.random()*90)
 
   elem.style.marginLeft = `${l}%`;
     elem.style.marginTop = `${m}%`;
