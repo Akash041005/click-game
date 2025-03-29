@@ -13,18 +13,18 @@ let change=0;
 
 
               easy.addEventListener('click',function(){
-              f=1
+              f=1000
 
               diffi.style.display = 'none';
 
               });
               mid.addEventListener('click',function(){
-                f=2;
+                f=800;
 
                 diffi.style.display = 'none';
                 });
                 hard.addEventListener('click',function(){
-                  f=3
+                  f=600
                 
                 diffi.style.display = 'none';
 
@@ -39,29 +39,35 @@ let d=0
  
 
 
-if(f==3){d=400}
-else if(f==2){d=600}
-else if(f==1){d=900}
+let conf = 0;
 
-else if(f==0 || f==null || f==undefined){
-
-  errr.innerHTML='enter difficulty properly '
-}
-if(conf=1){
+if (conf === 1) {
   diffi.style.display = 'none';
 }
 
 
 
-setInterval(function(){
-  l=Math.floor(Math.random()*80)
-  m= Math.floor(Math.random()*90)
 
-  elem.style.marginLeft = `${l}%`;
+let intervalId;
+
+function startGame() {
+
+  if (intervalId) {
+    clearInterval(intervalId);
+  }
+
+  intervalId = setInterval(function () {
+    l = Math.floor(Math.random() * 100);
+    m = Math.floor(Math.random() * 180);
+
+    elem.style.marginLeft = `${l}%`;
     elem.style.marginTop = `${m}%`;
+  }, f);
+}
 
-  
-},d)
+easy.addEventListener('click', startGame);
+mid.addEventListener('click', startGame);
+hard.addEventListener('click', startGame);
 console.log(l,m);
 
 elem.addEventListener('click',function(){
